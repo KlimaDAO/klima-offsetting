@@ -1,0 +1,464 @@
+.App {
+  text-align: center;
+  background-color: #2B2B2B;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.YourAddress {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: left;
+}
+
+.Address {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #9C9C9C;
+  text-align: left;
+}
+
+.Sidebar {
+  background-color: #202020;
+  width: 200px;
+  height: 97%;
+  padding-left: 42px;
+  padding-right: 42px;
+  padding-top: 3vh;
+  border-radius: 0px 14px 14px 0px;
+  font-family: 'Inter', sans-serif;
+}
+
+.Logo {
+  width: 36px;
+  height: 36px;
+  padding-right: 10px;
+}
+
+.LogoFont {
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  padding-top: 9px;
+}
+
+hr {
+  border: 1px solid #2B2B2B;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.Main {
+  float: left;
+  padding: 3vh 25px;
+  width: calc(100% - 244px);
+}
+
+.ConnectButton {
+  background-color: #00CC33;
+  width: 120px;
+  height: 36px;
+  border-radius: 6px;
+  border:none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: white;
+  float: right;
+}
+
+.ConnectButton:active {
+  background-color: #00b12c;
+  width: 120px;
+  height: 36px;
+  border-radius: 6px;
+}
+
+.DisconnectButton {
+  background-color: #202020;
+  width: 120px;
+  height: 36px;
+  border-radius: 6px;
+  border:none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: white;
+  float: right;
+}
+
+.DisconnectButton:active {
+  background-color: #111111;
+  width: 120px;
+  height: 36px;
+  border-radius: 6px;
+}
+
+
+.Card {
+  border-radius: 12px;
+  background: #202020;
+  padding: 28px 35px 32px 30px;
+  margin-bottom: 24px;
+  text-align: left;
+  position: relative;
+}
+
+.CardTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.CardSub {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0;
+  color: #9C9C9C;
+  padding-top: 10px;
+}
+
+.burn {
+  background-color: #00CC33;
+  width: 400px;
+  height: 52px;
+  border-radius: 8px;
+  border:none;
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+}
+
+.burn:active {
+  background-color: #01a52a;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+input[type="text"], textarea {
+  width: 400px;
+  background-color : #202020;
+  border-radius: 10px;
+  height: 50px;
+  border: 2px solid #2f2f2f;
+  margin-top: 6px;
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+
+input[type="number"], textarea {
+  width: 340px;
+  background-color : #202020;
+  border-radius: 10px 0 0 10px;
+  height: 50px;
+  border: 2px solid #2f2f2f;
+  margin-top: 6px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.Max {
+  background-color: #00CC33;
+  height: 52px;
+  width: 60px;
+  border-radius: 1px 10px 10px 1px;
+  border:none;
+}
+
+.Max:active {
+  background-color: #01a52a;
+}
+
+.CoinSelection {
+  background-color: #2B2B2B;
+  width: 400px;
+  height: 60px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 8px;
+  padding-right: 23px;
+  display: flex;
+  font-size: 17px;
+  font-weight: 500;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.CoinSelection:active {
+  background-color: #252525;
+}
+
+.BurnPanel {
+  position: absolute;
+  margin-top: 150px;
+  left: calc(50% - 200px);
+}
+
+.MiniCard {
+  border-radius: 12px;
+  background: #202020;
+  padding: 28px 35px 32px 30px;
+  margin-bottom: 24px;
+  text-align: left;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.MiniCard:hover {
+  animation: scaleup 0.15s ease-in-out;
+  z-index: 100;
+  animation-fill-mode: forwards;
+}
+
+.GraphCard {
+  border-radius: 12px;
+  background: #202020;
+  padding: 28px 35px 32px 30px;
+  margin-bottom: 24px;
+  text-align: left;
+  height: 51.5%;
+  font-size: 24px;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.GraphCard:hover {
+  animation: scaleup 0.15s ease-in-out;
+  z-index: 100;
+  animation-fill-mode: forwards;
+}
+
+.bigNumber {
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 600;
+  text-align: left;
+  margin: 20px 0 0 0;
+}
+
+.bigNumber2 {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  text-align: left;
+  margin: 15px 0 0 0;
+}
+
+.BCTburned {
+  color: #9C9C9C;
+}
+
+.graphDetails1 {
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #00CC33;
+}
+
+.graphDetails2 {
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #9C9C9C;
+}
+
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer {
+  width: 400px;
+  height: 450px;
+  border-radius: 12px;
+  background-color: #303030;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  align-items: flex-start;
+  display: flex;
+  animation: enter 200ms ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes enter{
+  0% { 
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% { 
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes exit{
+  0% { 
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% { 
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+}
+
+.modalClose {
+  background-color: #202020;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  text-align: center;
+}
+
+.selectCoinButton {
+  width: 400px;
+  height: 65px;
+  background-color: #303030;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 16px;
+  padding-left: 10px;
+  justify-content: flex-start;
+  display: flex;
+  padding-top: 8px;
+}
+
+.USDCcoinBox {
+  width: 48px;
+  height: 48px;
+  background: #85B0DE;
+  border-radius: 8px;
+}
+
+.BCTcoinBox {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(115.97deg, #212733 26.06%, #0B0C10 87.35%);
+  border-radius: 8px;
+}
+
+.KLIMAcoinBox {
+  width: 48px;
+  height: 48px;
+  background: #222222;
+  border-radius: 8px;
+}
+
+.coinName {
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  height: 45px;
+}
+
+.coinBalance {
+  font-weight: 500;
+  font-size: 12px;
+  color: #9C9C9C;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  height: 45px;
+}
+
+.coinDetails {
+  margin-left: 12px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@keyframes scaledown {
+  0% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleup {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(0.9)
+}
+
+#btnControl:checked + label > img {
+  align-items: flex-start;
+  display: flex;
+  animation: exit 200ms ease-in-out;
+}
+
+.Approving {
+  animation: spin 1s linear infinite;
+  height: 200px;
+  width: 200px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ApproveOutcome {
+  height: 200px;
+  width: 200px;
+}
+
