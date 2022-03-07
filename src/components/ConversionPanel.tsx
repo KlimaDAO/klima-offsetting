@@ -37,7 +37,7 @@ export function ConversionPanel(props: {
     <div>
       <div className="seperate">
         <p className="input-title">COST</p>
-        <p className="input-title">BURNING</p>
+        <p className="input-title">RETIRING</p>
       </div>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <CoinPanel
@@ -45,7 +45,12 @@ export function ConversionPanel(props: {
           coin={props.currentCoin}
           id="convertedAmount"
         />
-        <span data-tooltip = "This cost includes slippage and the aggregation fee of 1%." className="arrow">→</span>
+        <span
+          data-tooltip="This cost includes slippage and the aggregation fee of 1%."
+          className="arrow"
+        >
+          →
+        </span>
         <CoinPanel
           logo={carbonLogo}
           coin={props.currentCarbonType}

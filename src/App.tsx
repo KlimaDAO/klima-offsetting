@@ -287,10 +287,10 @@ function App() {
                   return;
                 }
                 (document.getElementById("amount") as HTMLInputElement).value =
-                  ((res[1] / 10 ** 18) * 0.99).toFixed(5);
+                  ((res[1] / 10 ** 18) * 0.989).toFixed(5);
                 (
                   document.getElementById("BCTamount") as HTMLSpanElement
-                ).textContent = ((res[1] / 10 ** 18) * 0.99).toFixed(2);
+                ).textContent = ((res[1] / 10 ** 18) * 0.989).toFixed(2);
                 (
                   document.getElementById("convertedAmount") as HTMLSpanElement
                 ).textContent = currentCoinBalance().toFixed(2);
@@ -660,7 +660,23 @@ function App() {
     return (
       <div className="main">
         <div className="header-panel">
-          <header className="card-title">Carbon Offset</header>
+          {width < 1200 ? (
+            <a
+              className="sidebar-button"
+              rel="noreferrer"
+              href="https://dapp.klimadao.finance/#/stake"
+            >
+              <div className="icon-container">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAA8ElEQVRIie3UMS8EQRiA4aF1rUIpVGqVKNx2/BuFaP0LVH4CkehOT6VzHRGi03C1R3NCxoSdzeyeYt/uS+bLs5vsbAh9/ykczASFmaCdwt/RzuAYrdEEYxyj6gpNdYmV35z5Rk/3d1UI4RobWVvYL/DW8ILVXLz2x4UFbOE0gY+y4BjP2NlL4MPGeObOWQQfZcOfeOb5YQSPG8G5YRDBb/GZtq7TXDS/dgWvR/NNV/BuNF+15Hzl58/nHcttYQNUOE/c4ZNSyA7uE0CqByyWgp9qos9YK4JO4cca6AWWiqFTeBt3ETTBLQ6xWRTs68vtA3Ssd9g+OqVXAAAAAElFTkSuQmCC"
+                  alt="back"
+                />
+              </div>
+              <span>Back to dApp</span>
+            </a>
+          ) : (
+            <div />
+          )}
           {active ? (
             <button onClick={connect} className="disconnect-button">
               DISCONNECT
@@ -673,7 +689,7 @@ function App() {
         </div>
         <div className="main-body">
           <div className="card">
-            <p className="card-title">Retire Carbon</p>
+            <p className="card-title">Retire Carbon (beta)</p>
             <p className="card-sub">
               Retire carbon and claim the underlying enviromental benefit of the
               carbon offset.
