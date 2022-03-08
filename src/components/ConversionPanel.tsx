@@ -37,7 +37,7 @@ export function ConversionPanel(props: {
     <div>
       <div className="seperate">
         <p className="input-title">COST</p>
-        <p className="input-title">BURNING</p>
+        <p className="input-title">RETIRING</p>
       </div>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <CoinPanel

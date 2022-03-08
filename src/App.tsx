@@ -204,7 +204,7 @@ function App() {
   function RetireAmountInput() {
     return (
       <div>
-        <p className="input-title">AMOUNT IN CARBON TONS</p>
+        <p className="input-title">AMOUNT IN CARBON TONNES</p>
         <input
           onKeyDown={(evt) =>
             ["e", "E", "+", "-"].includes(evt.key) && evt.preventDefault()
@@ -242,7 +242,7 @@ function App() {
           }}
           id="amount"
           type="number"
-          placeholder="How many carbon tons would you like to retire?"
+          placeholder="How many carbon tonnes would you like to retire?"
         />
         <button
           onClick={() => {
@@ -333,7 +333,7 @@ function App() {
       <button onClick={() => action()} className="burn">
         {active
           ? currentCoinApproved()
-            ? "BURN"
+            ? "RETIRE"
             : "APPROVE"
           : "CONNECT WALLET"}
       </button>
@@ -721,7 +721,7 @@ function App() {
               title="You've Retired"
               symbol={Leaf}
               amount={totalCarbonRetired.toFixed(3)}
-              subtitle="Tons of Carbon Retired"
+              subtitle="Tonnes of Carbon Retired"
             />
             <BreakdownCard
               carbonTypes={[

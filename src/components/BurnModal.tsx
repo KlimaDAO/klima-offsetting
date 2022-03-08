@@ -29,7 +29,7 @@ export function BurnModal(props: { setBurnModal: (a: boolean) => void }) {
           />
         </div>
         <p id="approvingStatus" style={{ margin: "auto" }}>
-          Burning...
+          Retiring...
         </p>
       </div>
     </div>
