@@ -1,4 +1,8 @@
-import { BCTcontractAddress, MCO2contractAddress, NCTcontractAddress } from "../contracts";
+import {
+  BCTcontractAddress,
+  MCO2contractAddress,
+  NCTcontractAddress,
+} from "../contracts";
 
 import BCTbox from "../assets/BCTbox.png";
 import MCO2box from "../assets/MCO2box.png";
@@ -62,19 +66,19 @@ export function CarbonModal(props: {
             setCarbonType={props.setCurrentCarbonType}
           />
           <ModalSelector
-            logo={MCO2box}
-            carbonType="MCO2"
-            isSelected={props.currentCarbonType === "MCO2"}
-            poolAddress={MCO2contractAddress}
+            logo={NCTbox}
+            carbonType="NCT"
+            isSelected={props.currentCarbonType === "NCT"}
+            poolAddress={NCTcontractAddress}
             setPoolToken={props.setPoolToken}
             setModal={props.setModal}
             setCarbonType={props.setCurrentCarbonType}
           />
           <ModalSelector
-            logo={NCTbox}
-            carbonType="NCT"
-            isSelected={props.currentCarbonType === "NCT"}
-            poolAddress={NCTcontractAddress}
+            logo={MCO2box}
+            carbonType="MCO2"
+            isSelected={props.currentCarbonType === "MCO2"}
+            poolAddress={MCO2contractAddress}
             setPoolToken={props.setPoolToken}
             setModal={props.setModal}
             setCarbonType={props.setCurrentCarbonType}
