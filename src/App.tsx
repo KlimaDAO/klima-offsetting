@@ -691,8 +691,7 @@ function App() {
           <div className="card">
             <p className="card-title">Retire Carbon (beta)</p>
             <p className="card-sub">
-              Retire carbon and claim the underlying enviromental benefit of the
-              carbon offset.
+              Claim the underlying enviromental benefit of carbon offsets, permanently removing them from circulation.
               <br />
             </p>
             <div className="burn-panel">
@@ -714,7 +713,7 @@ function App() {
               <InputField
                 title="BENEFICIARY"
                 type="text"
-                placeholder="Who is the beneficiary?"
+                placeholder="To whom will this retirement be credited?"
                 id="beneficiary"
               />
               <InputField
@@ -724,9 +723,9 @@ function App() {
                 id="beneficiaryAddress"
               />
               <InputField
-                title="RETIREMENT MESSAGE (optional)"
+                title="RETIREMENT MESSAGE"
                 type="text"
-                placeholder="Any additional info for your retirement?"
+                placeholder="Describe the purpose of this retirement."
                 id="retirementMessage"
               />
               <MainPanelButton />

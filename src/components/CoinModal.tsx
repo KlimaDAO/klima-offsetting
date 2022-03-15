@@ -85,42 +85,6 @@ export function CoinModal(props: {
         </div>
         <div>
           <ModalSelector
-            logo={BCTbox}
-            coin="BCT"
-            isSelected={props.currentCoin === "BCT"}
-            balance={props.BCTbalance}
-            coinAddress={BCTcontractAddress}
-            setSourceToken={props.setSourceToken}
-            setCoinModal={props.setModalOpen}
-            setCurrentCoin={props.setCurrentCoin}
-            setPoolToken={props.setPoolToken}
-            setCarbonType={props.setCarbonType}
-          />
-          <ModalSelector
-            logo={NCTbox}
-            coin="NCT"
-            isSelected={props.currentCoin === "NCT"}
-            balance={props.NCTbalance}
-            coinAddress={NCTcontractAddress}
-            setSourceToken={props.setSourceToken}
-            setCoinModal={props.setModalOpen}
-            setCurrentCoin={props.setCurrentCoin}
-            setPoolToken={props.setPoolToken}
-            setCarbonType={props.setCarbonType}
-          />
-          <ModalSelector
-            logo={MCO2box}
-            coin="MCO2"
-            isSelected={props.currentCoin === "MCO2"}
-            balance={props.MCO2balance}
-            coinAddress={MCO2contractAddress}
-            setSourceToken={props.setSourceToken}
-            setCoinModal={props.setModalOpen}
-            setCurrentCoin={props.setCurrentCoin}
-            setPoolToken={props.setPoolToken}
-            setCarbonType={props.setCarbonType}
-          />
-          <ModalSelector
             logo={USDCbox}
             coin="USDC"
             isSelected={props.currentCoin === "USDC"}
@@ -162,6 +126,42 @@ export function CoinModal(props: {
             isSelected={props.currentCoin === "wsKLIMA"}
             balance={props.wsKLIMAbalance}
             coinAddress={wsKLIMAcontractAddress}
+            setSourceToken={props.setSourceToken}
+            setCoinModal={props.setModalOpen}
+            setCurrentCoin={props.setCurrentCoin}
+            setPoolToken={props.setPoolToken}
+            setCarbonType={props.setCarbonType}
+          />
+          <ModalSelector
+            logo={BCTbox}
+            coin="BCT"
+            isSelected={props.currentCoin === "BCT"}
+            balance={props.BCTbalance}
+            coinAddress={BCTcontractAddress}
+            setSourceToken={props.setSourceToken}
+            setCoinModal={props.setModalOpen}
+            setCurrentCoin={props.setCurrentCoin}
+            setPoolToken={props.setPoolToken}
+            setCarbonType={props.setCarbonType}
+          />
+          <ModalSelector
+            logo={MCO2box}
+            coin="MCO2"
+            isSelected={props.currentCoin === "MCO2"}
+            balance={props.MCO2balance}
+            coinAddress={MCO2contractAddress}
+            setSourceToken={props.setSourceToken}
+            setCoinModal={props.setModalOpen}
+            setCurrentCoin={props.setCurrentCoin}
+            setPoolToken={props.setPoolToken}
+            setCarbonType={props.setCarbonType}
+          />
+          <ModalSelector
+            logo={NCTbox}
+            coin="NCT"
+            isSelected={props.currentCoin === "NCT"}
+            balance={props.NCTbalance}
+            coinAddress={NCTcontractAddress}
             setSourceToken={props.setSourceToken}
             setCoinModal={props.setModalOpen}
             setCurrentCoin={props.setCurrentCoin}
