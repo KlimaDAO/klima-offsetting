@@ -612,7 +612,8 @@ function App() {
         true,
         beneficiaryAddress,
         beneficiary,
-        retirementMessage
+        retirementMessage,
+        {gasLimit: 1.5 * 10**6}
       )
       .then(() => {
         successfulBurn();
