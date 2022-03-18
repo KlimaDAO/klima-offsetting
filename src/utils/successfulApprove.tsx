@@ -6,5 +6,5 @@ export function successfulApprove() {
   document.getElementById("approvalpic").classList.add("approve-outcome");
   document.getElementById("approvalpic").classList.remove("approving");
   document.getElementById("approvingStatus").textContent =
-    "Transaction Submitted!";
+    "Approved!";
 }
