@@ -544,37 +544,43 @@ function App() {
 
   async function approveCoin(coin: string): Promise<any> {
     setApproveModalOpened(true);
-    const con: [string, any] =
+    const con: [string, any, (b: boolean) => void] =
       coin === "BCT"
-        ? [BCTcontractAddress, BCTabi]
+        ? [BCTcontractAddress, BCTabi, setBCTapproved]
         : coin === "NCT"
-        ? [NCTcontractAddress, NCTabi]
+        ? [NCTcontractAddress, NCTabi, setNCTapproved]
         : coin === "MCO2"
-        ? [MCO2contractAddress, MCO2abi]
+        ? [MCO2contractAddress, MCO2abi, setMCO2approved]
         : coin === "USDC"
-        ? [USDCcontractAddress, USDCabi]
+        ? [USDCcontractAddress, USDCabi, setUSDCapproved]
         : coin === "KLIMA"
-        ? [KLIMAcontractAddress, KLIMAabi]
+        ? [KLIMAcontractAddress, KLIMAabi, setKLIMAapproved]
         : coin === "sKLIMA"
-        ? [sKLIMAcontractAddress, sKLIMAabi]
-        : [wsKLIMAcontractAddress, wsKLIMAabi];
+        ? [sKLIMAcontractAddress, sKLIMAabi, setsKLIMAapproved]
+        : [wsKLIMAcontractAddress, wsKLIMAabi, setwsKLIMAapproved];
     const provider = new ethers.providers.Web3Provider(
       (window as any).ethereum
     );
     await provider.send("eth_requestAccounts", []);
     const signer = await provider.getSigner();
     const erc20 = new ethers.Contract(con[0], con[1], signer);
+    
+    var transactionReceipt = await erc20.approve(offsetConsumptionAddress, approve_amount).catch((err: Error) => {
+      errorApprove();
+      console.log(err);
+      setTimeout(() => setApproveModalOpened(false), 2000);
+    });
 
-    erc20
-      .approve(offsetConsumptionAddress, approve_amount)
-      .then(() => {
-        successfulApprove();
-        setTimeout(() => setApproveModalOpened(false), 2000);
-      })
-      .catch((err: Error) => {
-        errorApprove();
-        setTimeout(() => setApproveModalOpened(false), 2000);
-      });
+    transactionReceipt.wait(1).then(() => {
+      successfulApprove();
+      con[2](true);
+      setTimeout(() => setApproveModalOpened(false), 2000);
+    })
+    .catch((err: Error) => {
+      errorApprove();
+      console.log(err);
+      setTimeout(() => setApproveModalOpened(false), 2000);
+    });
     return;
   }
 
@@ -723,7 +729,7 @@ function App() {
                 id="beneficiaryAddress"
               />
               <InputField
-                title="RETIREMENT MESSAGE"
+                title="RETIREMENT MESSAGE (280 character limit)"
                 type="text"
                 placeholder="Describe the purpose of this retirement."
                 id="retirementMessage"
