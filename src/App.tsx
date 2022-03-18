@@ -322,7 +322,7 @@ function App() {
         ).value;
         const retirementMessage =
           (document.getElementById("retirementMessage") as HTMLInputElement)
-            .value + " Retired via KlimaDAO";
+            .value;
         burnCoin(amount, beneficiaryAddress, beneficiary, retirementMessage);
       } else {
         approveCoin(currentCoin);
